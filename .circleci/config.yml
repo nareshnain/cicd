@@ -32,7 +32,7 @@ workflows:
       - test-job:
       - deploy-job:
           requires:
-            - test-job:
+            - test-job
           filters:
             branches:
               only: master
