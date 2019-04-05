@@ -29,7 +29,6 @@ workflows:
 
   -test_and_deploy:
     jobs:
-      - test-job
       - deploy-job
           filters:
             branches:
