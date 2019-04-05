@@ -29,7 +29,10 @@ workflows:
 
   -test_and_deploy:
     jobs:
+      - test-job:
       - deploy-job:
+          requires:
+            - test-job:
           filters:
             branches:
               only: master
